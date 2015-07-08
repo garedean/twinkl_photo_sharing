@@ -1,0 +1,26 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+#user_nav {
+  background: #08c;
+  color: white;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 10px;
+  a {
+    color: inherit;
+  }
+}
+
+.hero {
+  background: url("http://media.giphy.com/media/RHjyppvaMzJGU/giphy.gif") no-repeat;
+  background-size: cover;
+  height: 300px;
+  overflow: auto;
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin-top: 120px;
+    background: rgba(0, 0, 0, .6);
+  }
+}
