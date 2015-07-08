@@ -1,0 +1,8 @@
+<h1>Add your pictures.</h1>
+
+<%= form_for [@user, @picture] do |f| %>
+  <%#= file_field_tag "images[]", type: :file, multiple: true %>
+
+  <%= f.file_field :picture %>
+  <%= f.submit "Upload pictures" %>
+<% end %>

@@ -1,0 +1,6 @@
+<h1>Your pictures!</h1>
+
+
+<% @pictures.each do |picture| %>
+  <%= image_tag picture.picture.url %>
+<% end %>

@@ -10,15 +10,16 @@
 <body>
   <div id='container'>
     <div id="user_nav">
-      <%= link_to "Twinkl", root_path, class: "pull-left" %>
-
+      <%= link_to "Twinkl", root_path %> |
+      <%= link_to "Upload Pictures", new_user_picture_path(current_user), class: "pull=left" %>
+      <%#= image_tag(current_user.avatar.url(:thumb)) %>
       <span class="pull-right">
         <% if user_signed_in? %>
           Logged in as <strong><%= current_user.email %></strong>.
           <%= link_to 'Edit Profile', edit_user_registration_path %> |
           <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
         <% else %>
-          <%= link_to 'Sign Up', new_user_registration_path %>
+          <%= link_to 'Sign Up', new_user_registration_path %> |
           <%= link_to 'Login', new_user_session_path %>
         <% end %>
       </span>
