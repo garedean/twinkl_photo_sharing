@@ -10,8 +10,13 @@
 <body>
   <div id='container'>
     <div id="user_nav">
-      <%= link_to "Twinkl", root_path %> |
-      <%= link_to "Upload Pictures", new_user_picture_path(current_user), class: "pull=left" %>
+      <%= link_to "Twinkl", root_path %>
+      <% if current_user %>
+        |
+        <%= link_to "Upload Pictures", new_user_picture_path(current_user), class: "pull=left" %>
+        |
+        <%= link_to "My Pictures", user_pictures_path(current_user), class: "pull=left" %>
+      <% end %>
       <%#= image_tag(current_user.avatar.url(:thumb)) %>
       <span class="pull-right">
         <% if user_signed_in? %>
